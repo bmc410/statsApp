@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
-import Stats from './components/components/stats/components/stats';
+import Stats from './components/stats/stats';
+
 
 function App() {
   const initialPlayers = [
-    { id: 1, name: 'Player 1', kills: 0 }, // Add more players here
-    { id: 2, name: 'Player 2', kills: 0 },
+    { id: 1, name: 'Bill', kills: 0 }, // Add more players here
+    { id: 2, name: 'Kadi', kills: 0 },
     // ... Add more players up to 12
   ];
 
@@ -22,23 +23,13 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{padding:'10px'}}>
       <h1>Volleyball Player Stats Tracker</h1>
+      
       <table className="player-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Kills</th>
-            <th>Aces</th>
-            <th>Attempts</th>
-            <th>ServeError</th>
-            <th>ReceiveError</th>
-            {/* Add more header columns for other stats */}
-          </tr>
-        </thead>
         <tbody>
           {players.map(player => (
-              <Stats key={player.id} player={player} onStatChange={handleStatChange} />
+            <Stats key={player.id} player={player} onStatChange={handleStatChange} />
           ))}
         </tbody>
       </table>

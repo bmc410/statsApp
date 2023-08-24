@@ -1,0 +1,13 @@
+.p-inputtext {
+    margin: 0;
+    width: 100%!important;
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+    text-align: center!important;
+  }
+
+  p-button.p-button-icon-only {
+    width: 1.5rem!important;
+    padding: 0.75rem 0;
+  }
+    
